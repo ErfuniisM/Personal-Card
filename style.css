@@ -1,0 +1,302 @@
+/* * {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
+body {
+    height: 100%;
+    font-family: cursive;
+    background-color: #222831;
+}
+
+.card,
+.front-card,
+.back-card {
+    position: absolute;
+}
+
+.card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 320px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card .front-card {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: url('Erfan.jpg');
+    filter: invert(20%);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform .8s linear;
+}
+
+.card .back-card {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotateY(180deg);
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform .8s linear;
+}
+
+.card .back-card h2 {
+    margin-top: 20%;
+    color: #393E46;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+
+.card .back-card p {
+    color: #183158;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.card .back-card .contact-icons {
+    margin-top: 40px;
+}
+
+.card .back-card .contact-icons i {
+    cursor: pointer;
+    color: #393E46;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.bio {
+    margin-top: 40px;
+    color: #393E46;
+    font-size: 28px;
+}
+
+.card:hover>.back-card {
+    transform: rotateY(0deg);
+}
+
+.card:hover>.front-card {
+    transform: rotateY(-180deg);
+}
+
+
+
+
+@media only screen and (max-width: 330px) {
+    .container {
+        max-width: 575px;
+    }
+
+    .card {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 350px;
+        width: 280px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .card .back-card h2 {
+        margin-top: 20%;
+        color: #393E46;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card p {
+        color: #183158;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card .contact-icons {
+        margin-top: 30px;
+    }
+
+    .card .back-card .contact-icons i {
+        cursor: pointer;
+        color: #393E46;
+        font-size: 26px;
+        width: 30px;
+        height: 30px;
+        line-height: 40px;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+    .bio {
+        margin-top: 30px;
+        color: #393E46;
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 290px) {
+    .container {
+        max-width: 575px;
+    }
+
+    .card {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 320px;
+        width: 250px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .card .back-card h2 {
+        margin-top: 20%;
+        color: #393E46;
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card p {
+        color: #183158;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card .contact-icons {
+        margin-top: 30px;
+    }
+
+
+    .card .back-card .contact-icons i {
+        cursor: pointer;
+        color: #393E46;
+        font-size: 26px;
+        width: 30px;
+        height: 30px;
+        line-height: 40px;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+    .bio {
+        margin-top: 30px;
+        color: #393E46;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    .container {
+        max-width: 575px;
+    }
+
+    .card {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 280px;
+        width: 200px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .card .back-card h2 {
+        margin-top: 20%;
+        color: #393E46;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card p {
+        color: #183158;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card .contact-icons {
+        margin-top: 25px;
+    }
+
+
+    .card .back-card .contact-icons i {
+        cursor: pointer;
+        color: #393E46;
+        font-size: 26px;
+        width: 30px;
+        height: 30px;
+        line-height: 40px;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+    .bio {
+        margin-top: 30px;
+        color: #393E46;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 220px) {
+    .container {
+        max-width: 575px;
+    }
+
+    .card {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 240px;
+        width: 160px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .card .back-card h2 {
+        margin-top: 20%;
+        color: #393E46;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card p {
+        color: #183158;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .card .back-card .contact-icons {
+        margin-top: 25px;
+    }
+
+
+    .card .back-card .contact-icons i {
+        cursor: pointer;
+        color: #393E46;
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+        line-height: 40px;
+        border-radius: 50%;
+        margin: 4 5px;
+    }
+
+    .bio {
+        margin-top: 30px;
+        color: #393E46;
+        font-size: 12px;
+    }
+}
