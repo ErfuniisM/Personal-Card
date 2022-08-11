@@ -4,10 +4,9 @@
     box-sizing: border-box;
 } */
 
-
 body {
     height: 100%;
-    font-family: cursive;
+    font-family: 'Averia Sans Libre', cursive;
     background-color: #222831;
 }
 
@@ -31,7 +30,7 @@ body {
     height: 100%;
     width: 100%;
     text-align: center;
-    background: url('Erfan.jpg');
+    background: url('Nostalgia.jpg');
     filter: invert(20%);
     background-size: cover;
     background-position: center;
@@ -45,7 +44,7 @@ body {
     width: 100%;
     text-align: center;
     transform: rotateY(180deg);
-    background-color: #EEEEEE;
+    background-color: #27212f;
     border-radius: 10px;
     backface-visibility: hidden;
     transition: transform .8s linear;
@@ -53,14 +52,14 @@ body {
 
 .card .back-card h2 {
     margin-top: 20%;
-    color: #393E46;
+    color: #ffffff;
     font-size: 32px;
     letter-spacing: 1px;
 }
 
 
 .card .back-card p {
-    color: #183158;
+    color: #ffffff;
     font-size: 16px;
     letter-spacing: 1px;
 }
@@ -71,7 +70,7 @@ body {
 
 .card .back-card .contact-icons i {
     cursor: pointer;
-    color: #393E46;
+    color: #ffffff;
     font-size: 30px;
     width: 40px;
     height: 40px;
@@ -82,7 +81,7 @@ body {
 
 .bio {
     margin-top: 40px;
-    color: #393E46;
+    color: #ffffff;
     font-size: 28px;
 }
 
@@ -94,12 +93,9 @@ body {
     transform: rotateY(-180deg);
 }
 
-
-
-
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 600px) {
     .container {
-        max-width: 575px;
+        max-width: 600px;
     }
 
     .card {
@@ -112,15 +108,59 @@ body {
         perspective: 1000px;
     }
 
+    /* Click */
+
+    .loader {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loader::after,
+    .loader::before {
+        content: '';
+        box-sizing: border-box;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid #FFF;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: animloader 2s linear infinite;
+    }
+
+    .loader::after {
+        animation-delay: 1s;
+    }
+
+    @keyframes animloader {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+
+    /* Click */
+
     .card .back-card h2 {
         margin-top: 20%;
-        color: #393E46;
+        color: #ffffff;
         font-size: 30px;
         letter-spacing: 1px;
     }
 
     .card .back-card p {
-        color: #183158;
+        color: #ffffff;
         font-size: 14px;
         letter-spacing: 1px;
     }
@@ -131,7 +171,7 @@ body {
 
     .card .back-card .contact-icons i {
         cursor: pointer;
-        color: #393E46;
+        color: #ffffff;
         font-size: 26px;
         width: 30px;
         height: 30px;
@@ -142,161 +182,7 @@ body {
 
     .bio {
         margin-top: 30px;
-        color: #393E46;
+        color: #ffffff;
         font-size: 22px;
-    }
-}
-
-
-@media only screen and (max-width: 290px) {
-    .container {
-        max-width: 575px;
-    }
-
-    .card {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 320px;
-        width: 250px;
-        transform-style: preserve-3d;
-        perspective: 1000px;
-    }
-
-    .card .back-card h2 {
-        margin-top: 20%;
-        color: #393E46;
-        font-size: 26px;
-        letter-spacing: 1px;
-    }
-
-    .card .back-card p {
-        color: #183158;
-        font-size: 14px;
-        letter-spacing: 1px;
-    }
-
-    .card .back-card .contact-icons {
-        margin-top: 30px;
-    }
-
-
-    .card .back-card .contact-icons i {
-        cursor: pointer;
-        color: #393E46;
-        font-size: 26px;
-        width: 30px;
-        height: 30px;
-        line-height: 40px;
-        border-radius: 50%;
-        margin: 0 5px;
-    }
-
-    .bio {
-        margin-top: 30px;
-        color: #393E46;
-        font-size: 22px;
-    }
-}
-
-@media only screen and (max-width: 260px) {
-    .container {
-        max-width: 575px;
-    }
-
-    .card {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 280px;
-        width: 200px;
-        transform-style: preserve-3d;
-        perspective: 1000px;
-    }
-
-    .card .back-card h2 {
-        margin-top: 20%;
-        color: #393E46;
-        font-size: 22px;
-        letter-spacing: 1px;
-    }
-
-    .card .back-card p {
-        color: #183158;
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
-
-    .card .back-card .contact-icons {
-        margin-top: 25px;
-    }
-
-
-    .card .back-card .contact-icons i {
-        cursor: pointer;
-        color: #393E46;
-        font-size: 26px;
-        width: 30px;
-        height: 30px;
-        line-height: 40px;
-        border-radius: 50%;
-        margin: 0 5px;
-    }
-
-    .bio {
-        margin-top: 30px;
-        color: #393E46;
-        font-size: 16px;
-    }
-}
-
-@media only screen and (max-width: 220px) {
-    .container {
-        max-width: 575px;
-    }
-
-    .card {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 240px;
-        width: 160px;
-        transform-style: preserve-3d;
-        perspective: 1000px;
-    }
-
-    .card .back-card h2 {
-        margin-top: 20%;
-        color: #393E46;
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
-
-    .card .back-card p {
-        color: #183158;
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
-
-    .card .back-card .contact-icons {
-        margin-top: 25px;
-    }
-
-
-    .card .back-card .contact-icons i {
-        cursor: pointer;
-        color: #393E46;
-        font-size: 20px;
-        width: 25px;
-        height: 25px;
-        line-height: 40px;
-        border-radius: 50%;
-        margin: 4 5px;
-    }
-
-    .bio {
-        margin-top: 30px;
-        color: #393E46;
-        font-size: 12px;
     }
 }
